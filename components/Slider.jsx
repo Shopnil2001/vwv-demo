@@ -188,6 +188,7 @@ const Slider = () => {
 
         if (data.success && Array.isArray(data.slides)) {
           // Filter only active slides and sort by order
+          console.log(data);
           const activeSlides = data.slides
             .filter(slide => slide.isActive)
             .sort((a, b) => (a.order || 0) - (b.order || 0))
